@@ -1,0 +1,107 @@
+Springmvc学习：
+	springmvc的概念
+		mvc的概念
+		常用的mvc框架
+		springmvc的介绍
+		springmvc和spring的关系
+	springmvc的两种搭建方式
+		搭建方式一：
+			加载jar包
+				spring的包+springmvc的包
+			配置web.xml
+				配置Servlet
+			配置springmvc的配置文件
+				WEB-INF/<servlet-name>-servlet.xml
+				//配置schema
+				//配置注解扫描
+				//配置注解解析驱动
+			创建控制器类
+				在类名上使用@Controller注解控制器
+				创建单元方法，在单元方法上使用注解@RequestMapping("单元方法的访问名称")
+		搭建方式二:
+			加载jar包
+				spring的包+springmvc的包
+			配置web.xml
+				配置Servlet
+					在servlet标签中使用init-param标签配置springmvc配置文件的路径以及文件名
+					配置servlet的url-pattern为/
+			在src下配置springmvc.xml
+			创建控制器类
+				在类名上使用@Controller注解控制器
+				创建单元方法，在单元方法上使用注解@RequestMapping("单元方法的访问名称")
+		springmvc中servlet访问配置为/，造成无法访问静态资源的问题解决：
+			在springmvc.xml的配置文件中对静态资源进行放行。
+			在springmvc配置文件中使用
+				<mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
+				<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
+				<mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
+		/和/*的区别
+			/会拦截除jsp以外的所有请求
+			/*会拦截所有请求，这个是错误的配置方式
+	springmvc的传参
+		紧藕方式
+			传统的使用req对象
+		解耦方式
+			普通变量
+			同名不同值
+			对象
+			restful
+			ajax
+	springmvc的作用域
+		req
+		map
+		model
+	springmvc的响应
+		直接响应
+		请求转发
+		重定向
+	springmvc的三种响应方式
+		String
+		View
+		ModelAndView
+	springmvc的自定义视图解析器
+		配置springmvc的视图解析器bean
+	springmvc的上传和下载
+		上传
+			设置form表单数据提交格式
+			springmvc中配置字节流解析bean
+			获取上传资源数据对象
+			获取上传数据的流对象
+			将上传数据存储到指定位置
+			优化：
+				设置上传文件的大小
+				设置文件上传的类型
+				设置存储文件名
+		下载
+	ajax作业
+	springmvc的编码
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
